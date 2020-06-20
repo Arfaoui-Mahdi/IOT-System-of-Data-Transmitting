@@ -1,0 +1,96 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004     @WRITE_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1_LOW
+015     CCP_1
+015     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01B     CCP_2_HIGH
+020     valeur
+021-024 tension
+025-028 quantum
+029-02C pente
+02D-030 temperature
+031     @TRIS_C
+032-035 @PRINTF_L32D_9600_62_63FPFPF.P1
+032-033 @ITOF.P2
+032     main.@SCRATCH1
+033     @delay_ms1.P1
+036     @PRINTF_L32D_9600_62_63FPFPF.P1
+037     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH1
+038     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH2
+039     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH3
+03A     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH4
+03B     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH5
+03C     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH6
+03D     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH7
+03E     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH8
+03F-042 @MULFF.P1
+03F-042 @DIV3232.P2
+03F-042 @FTOSD.P3
+043-046 @DIV3232.P1
+043-046 @MULFF.P2
+043     @FTOSD.@SCRATCH1
+047     @MULFF.@SCRATCH1
+047     @DIV3232.@SCRATCH1
+048     @MULFF.@SCRATCH2
+048     @DIV3232.@SCRATCH2
+049     @MULFF.@SCRATCH3
+049     @DIV3232.@SCRATCH3
+04A     @MULFF.@SCRATCH4
+04A     @DIV3232.@SCRATCH4
+04B     @MULFF.@SCRATCH5
+04B     @DIV3232.@SCRATCH5
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+07B     @SCRATCH
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+0004  @delay_ms1
+01DB  main
+0018  @ITOF
+0037  @MULFF
+0115  @FTOSD
+00AC  @DIV3232
+00EE  @PRINTF_L32D_9600_62_63FPFPF
+01DB  @cinit
+
+
+User Memory space: 
+
+Project Directory:
+    C:\Users\Mahdi\Desktop\TP_Domo\
+
+Project Files:
+    main.c
+    ..\..\..\..\Program Files (x86)\PICC\devices\16f877a.h
+
+Units:
+    C:\Users\Mahdi\Desktop\TP_Domo\main.c (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      main.err
+    Ext Symbols: main.esym
+    INHX8:       main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.PJT
+    Call Tree:   main.tre
+    Statistics:  main.sta
